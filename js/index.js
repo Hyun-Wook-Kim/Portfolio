@@ -256,8 +256,17 @@ function loadFunc() {
 // 윈도우 크기가 재조정 되면 window.scrollTo의 값이 달라지기 때문에
 // 윈도우 크기가 재지정될 때 마다 스크롤 위치를 다시 지정해 줌.
 $(window).on("resize", () => {
-  let moveTop = sectionSec.eq(i).offset().top;
-  window.scrollTo(0, moveTop);
+
+  // 사이즈가 바뀌면 잽싸게 트랜지젼을 없애서 top의 위치로 쑉쑉 움직여주고
+    sectionSec.css('transition','none')
+    let moveTop = sectionSec.eq(i).offset().top;
+    $('html').css('scroll-behavior','auto')
+    window.scrollTo(0, moveTop);
+
+
+    // 그 다음에 다시 트랜지션을 설정해주면 profit!
+    sectionSec.css('transition','all 1s');
+    $('html').css('scroll-behavior','smooth');
 });
 
 // 제작 페이지 링크!
