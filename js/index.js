@@ -314,6 +314,15 @@ $('.imgBox>img').on('mouseout',()=>{
 
 
 
-$('.section4-top>ul>li').on('click',()=>{
-  $('.section4-bottom>ul').css({'transform':'translateX(-50%)'})
+$('.section4-top>ul>li').on('click',(event)=>{
+
+  $(event.target).addClass('on')
+  $(event.target).siblings().removeClass('on')
+
+  let index = $(event.target).index();
+  console.log(index)
+  let i = index;
+  $('.section4-bottom>ul').css({'transform':`translateX(${-i * 50}%)`})
+
 })
+
