@@ -270,10 +270,18 @@ $(window).on("resize", () => {
 });
 
 // 제작 페이지 링크!
-const myWorkImg = $(".myWorkImage");
-myWorkImg.on("click", () => {
+const myWorkImgHeavenly = $(".myWorkImageHeavenly");
+const myWorkImgWarframe = $(".myWorkImageWarframe");
+
+myWorkImgHeavenly.on("click", (event) => {
   window.open("http://kho9508@kho9508.dothome.co.kr/Heavenly/index.html");
 });
+
+myWorkImgWarframe.on("click", (event) => {
+  window.open("http://kho9508@kho9508.dothome.co.kr/Warframe/index.html");
+});
+
+
 
 
 
