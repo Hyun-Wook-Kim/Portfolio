@@ -311,3 +311,9 @@ $('.imgBox>img').on('mouseover',()=>{
 $('.imgBox>img').on('mouseout',()=>{
   $('.imgBoxDesc').css({"visibility":"hidden","opacity":"0"})
 })
+
+
+
+$('.section4-top>ul>li').on('click',()=>{
+  $('.section4-bottom>ul').css({'transform':'translateX(-50%)'})
+})

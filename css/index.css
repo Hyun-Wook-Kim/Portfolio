@@ -572,16 +572,57 @@ background: black;
 }
 
 
-.sections .section.sec4 .section4-con .section4-bottom {
-    width: 100%;
-    height: auto;
-    border: 0px solid;
+.sections .section.sec4 .section4-con .section4-top>ul{
+    width: 100px;
+    margin: 0 auto;
+    border: 1px solid black;
     display: flex;
-    align-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.sections .section.sec4 .section4-con .section4-bottom .myWorkImg {
+.sections .section.sec4 .section4-con .section4-top>ul>li{
+    width:30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sections .section.sec4 .section4-con .section4-top>ul>li:hover{
+    background-color: rgb(241, 221, 195);
+}
+
+.on{
+    background-color: rgb(241, 221, 195);
+}
+
+.sections .section.sec4 .section4-con .section4-bottom {
+    width: 100%;
+    height: 85vh;
+    border: 0px solid;
+    align-content: center;
+    border: 0px solid black;
+}
+
+.sections .section.sec4 .section4-con .section4-bottom>ul{
+    width: 200%;
+    height: 100%;
+    display: flex;
+    border: 0px solid black;
+    align-items: center;
+    position: relative;
+    /* transform: translateX(-50%); */
+    left: 0%;
+    top: 0;
+    transition: all 2s;
+}
+
+.sections .section.sec4 .section4-con .section4-bottom>ul>li{
+    width: 50%;
+}
+
+
+.sections .section.sec4 .section4-con .section4-bottom>ul>li>.myWorkImg {
     width: 100%;
     height: auto;
     border: 0px solid;
@@ -592,7 +633,7 @@ background: black;
 
 
 
-.sections .section.sec4 .section4-con .section4-bottom .myWorkImg .imgBox {
+.sections .section.sec4 .section4-con .section4-bottom>ul>li>.myWorkImg .imgBox {
     width: 40%;
     max-width: 600px;
     height: auto;
@@ -602,7 +643,7 @@ background: black;
 }
 
 
-.sections .section.sec4 .section4-con .section4-bottom .myWorkImg .imgBox>img {
+.sections .section.sec4 .section4-con .section4-bottom>ul>li>.myWorkImg .imgBox>img {
     display: block;
     width: 100%;
     height: auto;
@@ -610,12 +651,12 @@ background: black;
     transition: all 0.3s;
 }
 
-.sections .section.sec4 .section4-con .section4-bottom .myWorkImg .imgBox>img:hover{
+.sections .section.sec4 .section4-con .section4-bottom>ul>li>.myWorkImg .imgBox>img:hover{
     opacity: 0.7;
     filter: brightness(50%);
 }
 
-.sections .section.sec4 .section4-con .section4-bottom .myWorkImg .imgBox .imgBoxDesc{
+.sections .section.sec4 .section4-con .section4-bottom>ul>li>.myWorkImg .imgBox .imgBoxDesc{
     width: 100%;
     position: absolute;
     top: 0;
@@ -642,7 +683,7 @@ background: black;
 
 
 
-.sections .section.sec4 .section4-bottom .myWorkText {
+.sections .section.sec4 .section4-bottom>ul>li>.myWorkText {
     font-size: 1rem;
     width: 100%;
     text-align: center;
@@ -650,7 +691,7 @@ background: black;
     line-height: 2rem;
 }
 
-.sections .section.sec4 .section4-bottom .myWorkText>p>a:hover{
+.sections .section.sec4 .section4-bottom>ul>li>.myWorkText>p>a:hover{
     text-decoration: underline;
     text-shadow: 1px 1px 2px black;
 }
